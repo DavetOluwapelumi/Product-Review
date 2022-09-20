@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.grid-container{
+    margin: 30px auto;
+    padding: 0 auto;
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+.img img{
+    max-width: 100%; 
+    display: inherit;
+    border-radius: 15px 0 0 15px;
+}
+.pro-cart, .pro-name, .pro-des, .pro-price, button{
+    margin-top: 16px ;
+}
+.card-content{
+    padding: 15px;
+
+}
+button{
+    width: 100%;
+    border: none;
+    line-height: 40px;
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    border-radius: 8px;
+}
+.pro-price{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.pro-price #current-price{
+    padding-right: 25px;
+    font-size: 35px;
+    color: hsl(158, 36%, 37%);
+}
+.pro-price #old-price{
+    color: (212, 21%, 14%);
+    font-size: small;
+    font-weight: 500;
+}
+.pro-cart{
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: hsl(212, 21%, 14%);
+}
+.pro-name{
+    font-weight: 700;
+    font-size: 43px;
+}
+.pro-des{
+    font-size: 16px;
+    color: hsl(212, 21%, 14%);
+}
+button:hover{
+    background-color: hsl(158, 36%, 23%);
+}
+@media screen and (max-width: 628px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    body{
+        margin: auto 20px;
+       
+    }
+    .img img{
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+    .card-content{
+        display: block;
+    }
+    h6, .pro-cart, .pro-des, .pro-name. .pro-price{
+        padding-bottom: 15 px;
+    }
+    h6{
+        font-size: 14px;
+    }
+    
+}
